@@ -1,0 +1,11 @@
+name: network_medicine_tutorial
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - conda-forge::python=3.12
+  - conda-forge::jupyterlab=4.3
+  - conda-forge::pandas=2.2
+  - bioconda::nedrex=0.1.4
+  - bioconda::nextflow=24.10.5
