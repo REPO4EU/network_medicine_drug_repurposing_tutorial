@@ -1,0 +1,6 @@
+[submodule "robust_bias_aware"]
+	path = robust_bias_aware
+	url = https://github.com/bionetslab/robust_bias_aware
+[submodule "DIAMOnD"]
+	path = DIAMOnD
+	url = https://github.com/dinaghiassian/DIAMOnD
