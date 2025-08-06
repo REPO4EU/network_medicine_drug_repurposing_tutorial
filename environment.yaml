@@ -14,3 +14,5 @@ dependencies:
   - bioconda::nedrex=0.1.4
   - bioconda::nextflow=24.10.5
   - bioconda::pcst-fast=1.0.10
+  - bioconda::gprofiler-official
+  - conda-forge::requests 
