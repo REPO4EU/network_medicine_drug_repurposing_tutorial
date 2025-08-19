@@ -21,4 +21,19 @@ Launch the jupyter sever to start working on the hands-on projects:
 jupyter lab
 ```
 
-Please also have an installation of [Docker](https://docs.docker.com/engine/install/) available. 
+### Nextflow pipeline setup
+Activate the environment (Nextflow is already installed there):
+
+```bash  
+conda activate network_medicine_tutorial
+```
+
+Install [Docker](https://docs.docker.com/engine/install/) if you do not have it already.
+
+Now, run the pipeline with the test profile to verify that the setup works:
+
+```bash  
+nextflow run nf-core/diseasemodulediscovery -r dev -profile docker,test --outdir test_results
+```
+
+The first run may take some time because Nextflow needs to pull the software dependency containers. Subsequent runs should be significantly faster.
