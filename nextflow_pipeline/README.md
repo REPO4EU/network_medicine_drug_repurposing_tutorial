@@ -18,14 +18,16 @@ Please refer to the pipeline's [usage documentation](https://nf-co.re/diseasemod
 
 ## Task 1: Run the pipeline on the Huntington's Disease data
 
-Run the [nf-core/diseasemodulediscovery](https://nf-co.re/diseasemodulediscovery/dev/) pipeline using the Huntington's Disease-associated proteins as seeds and the PPI queried from NeDRex as network. To obtain results quickly, skip the evaluation workflow, as it is the most time-consuming step. Like this, the pipeline should finish in a few minutes.
+Run the [nf-core/diseasemodulediscovery](https://nf-co.re/diseasemodulediscovery/dev/) pipeline using the Huntington's Disease-associated proteins as seeds and the PPI queried from NeDRex as network. To obtain results quickly, skip slow processes like DIGEST and the module annotation. Like this, the pipeline should finish in a couple of minutes.
 
 > [!NOTE]
 > The pipeline is still under development. To run it, include the `-r dev` parameter.
 > 
 > The ID space needs to be set to  `uniprot` to match the input.
 > 
-> You can skip the evaluation workflow using the `--skip_evaluation` flag.
+> You can skip the DIGEST using the `--skip_digest` flag.
+> 
+> You can skip the module annotation using the `--skip_annotation` flag.
 
 
 <details markdown="1">
@@ -37,18 +39,22 @@ nextflow run nf-core/diseasemodulediscovery \
 --seeds ../data/NeDRex_api/seed_genes_huntingtons_disease.csv \
 --network ../data/NeDRex_api/filtered_ppi_only_reviewed_proteins_solution.csv \
 --id_space uniprot \
---outdir results \
---skip_evaluation
+--skip_digest \
+--skip_annotation \
+--outdir results 
 ```
 
 </details>
 
-## Task 2: Run the evaluation workflow
+## Task 2: Run the seed permutation workflow
 Once the run from Task 1 is complete, we have our first results to examine.
-Next, let’s run the evaluation workflow by resuming the previous pipeline run without skipping the evaluation. This will make use of cached processes.
+Next, let’s run the seed permutation workflow by resuming the previous pipeline run. This will make use of cached processes.
 
 > [!NOTE]
+> The seed permutation-based evaluation workflow does not run per default. Enable it using the `--run_seed_permutation` flag.
+>
 > A pipeline run can be resumed by providing the `-resume` flag.
+
 
 <details markdown="1">
 <summary> Solution </summary>
@@ -59,22 +65,95 @@ nextflow run nf-core/diseasemodulediscovery \
 --seeds ../data/NeDRex_api/seed_genes_huntingtons_disease.csv \
 --network ../data/NeDRex_api/filtered_ppi_only_reviewed_proteins_solution.csv \
 --id_space uniprot \
+--skip_digest \
+--skip_annotation \
 --outdir results \
+--run_seed_permutation \
 -resume
 ```
 
 </details>
 
-You don't need to wait until this resumed run finishes, but can continue with Task 3, which does not need the additional results.
+You don’t need to wait until the seed permutation analysis completes. You can go ahead with Task 3, which doesn’t require the additional results.
 
-## Task 3: MultiQC report 
+## Task 3: Exploring the output
 
-## Task 4: Run the seed input perturbation 
+**Check the MultiQC pipeline report (`results/multiqc/multiqc_report.html`) to answer the following questions:**
 
-## Task 5: Module similarity and functional coherence
+How many nodes and edges are in the input network?
 
-## Task 6: Robustness and seed rediscovery
+<details markdown="1">
+<summary> Solution </summary>
 
+</details>
+
+What is the diameter of the input network?
+
+<details markdown="1">
+<summary> Solution </summary>
+
+</details>
+
+Which method returns the largest disease module?
+
+<details markdown="1">
+<summary> Solution </summary>
+
+</details>
+
+Which method removes the most seed nodes from its module?
+
+<details markdown="1">
+<summary> Solution </summary>
+
+</details>
+
+**In the MultiQC report, click on the Drugst.One export link of the random walk with restart (RWR) module to explore it through the Drugst.One web interface. Enable displaying adjacent drugs.**
+
+Are there any drugs that directly target the mutant huntingtin (HTT) protein?
+
+<details markdown="1">
+<summary> Solution </summary>
+
+</details>
+
+Which compounds have the highest TrustRank score for the RWR disease module?
+<details markdown="1">
+<summary> Solution </summary>
+
+</details>
+
+Which disease modules have the most similar node sets?
+<details markdown="1">
+<summary> Solution </summary>
+
+</details>
+
+
+## Task 4: Robustness and seed rediscovery
+
+Which method is most robust towards the leave-one-out seed set perturbation? 
+
+<details markdown="1">
+<summary> Solution </summary>
+
+</details>
+
+Which method is most depended on some individual seed nodes? 
+
+<details markdown="1">
+<summary> Solution </summary>
+
+</details>
+
+Which method performs best at recovering the left-out seed nodes?
+
+<details markdown="1">
+<summary> Solution </summary>
+
+</details>
+
+Which seed node is most frequently recovered?
 
 <details markdown="1">
 <summary> Solution </summary>
