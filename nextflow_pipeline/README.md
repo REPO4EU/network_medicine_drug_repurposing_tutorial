@@ -78,6 +78,9 @@ You don’t need to wait until the seed permutation analysis completes. You can 
 
 ## Task 3: Exploring the output
 
+> [!NOTE]
+> Because NeDRex is continuously updated and some methods in the pipeline involve randomness, your results may not exactly match the provided solutions.
+
 **Check the MultiQC pipeline report (`results/multiqc/multiqc_report.html`) to answer the following questions:**
 
 How many nodes and edges are in the input network?
@@ -85,12 +88,18 @@ How many nodes and edges are in the input network?
 <details markdown="1">
 <summary> Solution </summary>
 
+> This information can be found in the **Input/Network** section of the MultiQC report.
+> The used input network has **~12.800 nodes** and **~95.900 edges**.
 </details>
 
 What is the diameter of the input network?
 
 <details markdown="1">
 <summary> Solution </summary>
+
+> The input network diameter is **10** and can be found in the same section of the MultiQC report.
+> The diameter represents the longest shortest path between any two nodes in the network.
+> For a PPI network, a diameter of 10 is relatively large. Unfiltered, larger PPIs are typically much denser, with diameters around 6.
 
 </details>
 
@@ -99,12 +108,21 @@ Which method returns the largest disease module?
 <details markdown="1">
 <summary> Solution </summary>
 
+> This information can be found in the **General Statistics** section of the MultiQc report.
+> The **1st Neighbors** approach produces by far the largest disease modules, both in terms of nodes and edges.
+> This is due to the high density of PPI networks and the occurrence of high-degree hub nodes. 
+> Consequently, 1st Neighbor modules may contain a very large number of nodes, so their specificity should be interpreted with caution.
+
 </details>
 
 Which method removes the most seed nodes from its module?
 
 <details markdown="1">
 <summary> Solution </summary>
+
+> This information can be found in the **General Statistics** section of the MultiQc report as well.
+> The number of included `Seeds` is lowest for **DOMINO**, as it often excludes seed nodes from its modules.
+> This can be advantageous if the seed set is noisy, but undesirable when working with a high-confidence gene selection.
 
 </details>
 
