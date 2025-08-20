@@ -126,6 +126,17 @@ Which method removes the most seed nodes from its module?
 
 </details>
 
+Which disease modules have the most similar node sets?
+
+<details markdown="1">
+<summary> Solution </summary>
+
+> You can find the relevant results in the **Overlap** section of the MultiQC report, which visualizes overlaps between disease module node sets using heatmaps. 
+> Several configurations are available: overlaps can be quantified either by the number of shared nodes or by the Jaccard index. In addition, overlaps are also computed after removing the seed nodes, as these are expected to be present in the modules by default.
+> The strongest similarity (based on the Jaccard index) is observed between the modules derived with **RWR and ROBUST**.
+
+</details>
+
 **In the MultiQC report, click on the Drugst.One export link of the random walk with restart (RWR) module to explore it through the Drugst.One web interface. Enable displaying adjacent drugs.**
 
 Are there any drugs that directly target the mutant huntingtin (HTT) protein?
@@ -133,20 +144,23 @@ Are there any drugs that directly target the mutant huntingtin (HTT) protein?
 <details markdown="1">
 <summary> Solution </summary>
 
+> Adjacent drugs can be displayed using `Drugs` button in the right scroll menu.
+> Currently, there are **no drugs** that directly target HTT, which motivates the use of network medicine approaches to identify alternative candidates.
+> While some drugs do target other seed nodes, many are associated with nodes added during module construction. These may represent promising new therapeutic targets.
+
 </details>
 
-Which compounds have the highest TrustRank score for the RWR disease module?
+**Let's now check which drugs are network-based approach suggests based on the RWR module. For this, vave a look at the `results/drug_prioritization/drugstone/*.rwr.trustrank.drug_predictions.tsv` file.**
+
+Which compounds have the highest TrustRank score (column `score`) for the RWR disease module?
+
 <details markdown="1">
 <summary> Solution </summary>
 
-</details>
-
-Which disease modules have the most similar node sets?
-<details markdown="1">
-<summary> Solution </summary>
+> Two compounds achieve the highest TrustRank score of 1: **Econazole and Miconazole**, both commonly used as antifungal agents. Their high ranking arises from the fact that they target the seed protein CNR1 (UniProt: P21554) as well as several additional nodes within the module.
+> But does it really make sense to treat Huntington’s disease with antifungal drugs? At the very least, this is questionable. These are only algorithmic suggestions and must be carefully evaluated and prioritized by biomedical experts.
 
 </details>
-
 
 ## Task 4: Robustness and seed rediscovery
 
