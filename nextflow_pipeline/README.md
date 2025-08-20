@@ -164,17 +164,18 @@ Which compounds have the highest TrustRank score (column `score`) for the RWR di
 
 ## Task 4: Robustness and seed rediscovery
 
+Working on this task requires that the second pipeline run performing the leave-one-out analysis is completed.
+If this is tha case, reopen the MultiQC report to have the updated results.
+
+**Using the MultiQC report, answer the following questions:**
+
 Which method is most robust towards the leave-one-out seed set perturbation? 
 
 <details markdown="1">
 <summary> Solution </summary>
 
-</details>
-
-Which method is most depended on some individual seed nodes? 
-
-<details markdown="1">
-<summary> Solution </summary>
+> After reloading the MultiQC report from the second pipeline run, the **General Statistics** section should now display additional columns for the leave-one-out analysis.
+> Overall, the methods appear to be fairly robust to the removal of individual nodes from the seed set, with the **1st Neighbors** approach showing the highest robustness.
 
 </details>
 
@@ -183,11 +184,30 @@ Which method performs best at recovering the left-out seed nodes?
 <details markdown="1">
 <summary> Solution </summary>
 
+> The **General Statistics** section includes two columns reporting seed rediscovery. This metric reflects the fraction of seed nodes a method was able to reinclude in its module. Since methods that generally add more nodes tend to perform better at this task, a normalized version is also shown, which adjusts for module size.
+> Overall, **RWR** and **1st Neighbors** recover the largest number of seeds, but when module size is taken into account, **DOMINO** performs best.
+
+</details>
+
+**Let us now take a closer look at the leave-one-out analysis at the level of individual genes. For this, refer to the heatmaps in `results/evaluation/seed_permutation`.**
+
+Which method shows the strongest dependence on specific seed nodes?
+
+<details markdown="1">
+<summary> Solution </summary>
+
+> The answer to this question can be found in the **robustness heatmap**.
+> **DIAMOnD** is generally robust to towards the removal of most seeds, but it shows a strong dependence on a few specific ones, indicated by small Jaccard indices.
+
 </details>
 
 Which seed node is most frequently recovered?
 
 <details markdown="1">
 <summary> Solution </summary>
+
+> The answer to this question can be found in the **seed rediscovery heatmap**.
+> The most frequently recovered seed nodes is MAOB (UniProt: **P27338**).
+> Overall, most methods struggle to recover most of the seed nodes.
 
 </details>
