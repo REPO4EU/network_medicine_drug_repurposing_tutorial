@@ -208,3 +208,9 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Nextflow pipeline files
+.nextflow/
+nextflow_pipeline/results/
+work/
+test_results/
