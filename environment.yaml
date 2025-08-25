@@ -4,15 +4,15 @@ channels:
   - bioconda
   - defaults
 dependencies:
-  - conda-forge::python=3.12
-  - conda-forge::jupyterlab=4.3
-  - conda-forge::pandas=2.2
-  - conda-forge::networkx=3.5
-  - conda-forge::matplotlib=3.10.5
-  - conda-forge::scipy=1.16.0
-  - conda-forge::graph-tool
-  - bioconda::nedrex=0.1.4
-  - bioconda::nextflow=24.10.5
-  - bioconda::pcst-fast=1.0.10
-  - bioconda::gprofiler-official
-  - conda-forge::requests 
+  - python=3.12
+  - jupyterlab=4.3
+  - pandas=2.2
+  - networkx=3.5
+  - matplotlib=3.10.5
+  - scipy=1.16.0
+  - graph-tool
+  - nedrex=0.1.4
+  - nextflow=24.10.5
+  - pcst-fast=1.0.10
+  - gprofiler-official
+  - requests
