@@ -214,3 +214,4 @@ __marimo__/
 nextflow_pipeline/results/
 work/
 test_results/
+.idea

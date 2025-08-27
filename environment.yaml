@@ -16,3 +16,4 @@ dependencies:
   - pcst-fast=1.0.10
   - gprofiler-official
   - requests
+  - tqdm
