@@ -20,7 +20,7 @@ Please refer to the pipeline's [usage documentation](https://nf-co.re/diseasemod
 
 Run the [nf-core/diseasemodulediscovery](https://nf-co.re/diseasemodulediscovery/dev/) pipeline using the Huntington's Disease-associated proteins as seeds and the PPI queried from NeDRex as network. To obtain results quickly, skip slow processes like DIGEST and the module annotation. Like this, the pipeline should finish in a couple of minutes.
 
-> [!NOTE]
+> [!TIP]
 > The pipeline is still under development. To run it, include the `-r dev` parameter.
 > 
 > The ID space needs to be set to  `uniprot` to match the input.
@@ -50,7 +50,7 @@ nextflow run nf-core/diseasemodulediscovery \
 Once the run from Task 1 is complete, we have our first results to examine.
 Next, let’s run the seed permutation workflow by resuming the previous pipeline run. This will make use of cached processes.
 
-> [!NOTE]
+> [!TIP]
 > The seed permutation-based evaluation workflow does not run per default. Enable it using the `--run_seed_permutation` flag.
 >
 > A pipeline run can be resumed by providing the `-resume` flag.
@@ -150,7 +150,7 @@ Are there any drugs that directly target the mutant huntingtin (HTT) protein?
 
 </details>
 
-**Let's now check which drugs are network-based approach suggests based on the RWR module. For this, vave a look at the `results/drug_prioritization/drugstone/*.rwr.trustrank.drug_predictions.tsv` file.**
+**Let's now check which drugs are network-based approach suggests based on the RWR module. For this, have a look at the `results/drug_prioritization/drugstone/*.rwr.trustrank.drug_predictions.tsv` file.**
 
 Which compounds have the highest TrustRank score (column `score`) for the RWR disease module?
 
@@ -164,12 +164,12 @@ Which compounds have the highest TrustRank score (column `score`) for the RWR di
 
 ## Task 4: Robustness and seed rediscovery
 
-Working on this task requires that the second pipeline run performing the leave-one-out analysis is completed.
-If this is tha case, reopen the MultiQC report to have the updated results.
+Working on this task requires that the second pipeline run, performing the leave-one-out analysis, be completed.
+If this is the case, reopen the MultiQC report to have the updated results.
 
 **Using the MultiQC report, answer the following questions:**
 
-Which method is most robust towards the leave-one-out seed set perturbation? 
+Which method is most robust to the leave-one-out seed set perturbation? 
 
 <details markdown="1">
 <summary> Solution </summary>
@@ -197,7 +197,7 @@ Which method shows the strongest dependence on specific seed nodes?
 <summary> Solution </summary>
 
 > The answer to this question can be found in the **robustness heatmap**.
-> **DIAMOnD** is generally robust to towards the removal of most seeds, but it shows a strong dependence on a few specific ones, indicated by small Jaccard indices.
+> **DIAMOnD** is generally robust to the removal of most seeds, but it shows a strong dependence on a few specific ones, indicated by small Jaccard indices.
 
 </details>
 
@@ -207,7 +207,7 @@ Which seed node is most frequently recovered?
 <summary> Solution </summary>
 
 > The answer to this question can be found in the **seed rediscovery heatmap**.
-> The most frequently recovered seed nodes is MAOB (UniProt: **P27338**).
+> The most frequently recovered seed node is MAOB (UniProt: **P27338**).
 > Overall, most methods struggle to recover most of the seed nodes.
 
 </details>
