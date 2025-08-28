@@ -16,7 +16,14 @@ Activate the environment:
 conda activate network_medicine_tutorial
 ```
 
+Register the environment as a jupyter kernel:
+
+```
+python -m ipykernel install --user --name network_medicine_tutorial --display-name "network_medicine_tutorial"
+```
+
 Launch the jupyter sever to start working on the hands-on projects:
+
 ```bash  
 jupyter lab
 ```
