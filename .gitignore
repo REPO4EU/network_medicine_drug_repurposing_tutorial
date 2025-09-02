@@ -211,7 +211,7 @@ __marimo__/
 
 # Nextflow pipeline files
 .nextflow/
-nextflow_pipeline/results/
+Session3_nextflow_pipeline/results/
 work/
 test_results/
 .idea
