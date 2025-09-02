@@ -8,7 +8,7 @@ The pipeline runs through the command line, so you do not need a Jupyter server 
 To begin, open a CLI and navigate to this subfolder:
 
 ```bash  
-cd <path/to/repo>/nextflow_pipeline
+cd <path/to/repo>/Session3_nextflow_pipeline
 ```
 
 Please refer to the pipeline's [usage documentation](https://nf-co.re/diseasemodulediscovery/dev/docs/usage/), [parameter documentation](https://nf-co.re/diseasemodulediscovery/dev/parameters/), and [output documentation](https://nf-co.re/diseasemodulediscovery/dev/docs/output/) to solve the tasks.
