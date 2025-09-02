@@ -1,0 +1,51 @@
+,drugId,label,status,drugstoneType,score,hasEdgesTo,isResult,isConnector
+Disulfiram,DB00822,Disulfiram,approved,drug,0.6144,"['P21917', 'P14416', 'P21397']",True,False
+Ethynodiol diacetate,DB00823,Ethynodiol diacetate,approved,drug,0.3367,['P21397'],True,False
+Isocarboxazid,DB01247,Isocarboxazid,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Tetracaine,DB09085,Tetracaine,approved,drug,0.3367,['P21397'],True,False
+Nabumetone,DB00461,Nabumetone,approved,drug,0.3367,['P21397'],True,False
+Trioxsalen,DB04571,Trioxsalen,approved,drug,0.6117,"['P29274', 'P21397']",True,False
+Mebanazine,DB09248,Mebanazine,approved,drug,0.5847,"['P27338', 'P21397']",True,False
+Phenmetrazine,DB00830,Phenmetrazine,approved,drug,0.3367,['P21397'],True,False
+Methoxsalen,DB00553,Methoxsalen,approved,drug,0.3367,['P21397'],True,False
+Selegiline,DB01037,Selegiline,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Dronabinol,DB00470,Dronabinol,approved,drug,0.4474,['P21554'],True,False
+Dextroamphetamine,DB01576,Dextroamphetamine,approved,drug,0.3367,['P21397'],True,False
+Nimodipine,DB00393,Nimodipine,approved,drug,0.4474,['P21554'],True,False
+Raloxifene,DB00481,Raloxifene,approved,drug,0.3614,"['P29274', 'P14416']",True,False
+Rimonabant,DB06155,Rimonabant,approved,drug,0.4474,['P21554'],True,False
+Phenelzine,DB00780,Phenelzine,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Gentian violet cation,DB00406,Gentian violet cation,approved,drug,0.3614,"['P14416', 'P29274']",True,False
+Pargyline,DB01626,Pargyline,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Acetaminophen,DB00316,Acetaminophen,approved,drug,0.4474,['P21554'],True,False
+Iproniazid,DB04818,Iproniazid,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Toloxatone,DB09245,Toloxatone,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Rosiglitazone,DB00412,Rosiglitazone,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Nomifensine,DB04821,Nomifensine,approved,drug,0.3367,['P21397'],True,False
+Mestranol,DB01357,Mestranol,approved,drug,0.4474,['P21554'],True,False
+Menadione,DB00170,Menadione,approved,drug,0.5847,"['P27338', 'P21397']",True,False
+Rasagiline,DB01367,Rasagiline,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Amiloride,DB00594,Amiloride,approved,drug,0.6117,"['P29274', 'P21397']",True,False
+Diethylstilbestrol,DB00255,Diethylstilbestrol,approved,drug,0.3614,"['P29274', 'P14416']",True,False
+Clotrimazole,DB00257,Clotrimazole,approved,drug,0.5526,"['P21917', 'P29274', 'P14416']",True,False
+Orlistat,DB01083,Orlistat,approved,drug,0.4474,['P21554'],True,False
+Primaquine,DB01087,Primaquine,approved,drug,0.5847,"['P27338', 'P21397']",True,False
+Tamoxifen,DB00675,Tamoxifen,approved,drug,0.6167,"['P21917', 'P14416', 'Q08209', 'P29274']",True,False
+Mezlocillin,DB00948,Mezlocillin,approved,drug,0.4474,['P21554'],True,False
+Linezolid,DB00601,Linezolid,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Leflunomide,DB01097,Leflunomide,approved,drug,0.3367,['P21397'],True,False
+Miconazole,DB01110,Miconazole,approved,drug,1.0,"['P21554', 'P21917', 'P29274', 'P14416']",True,False
+Safinamide,DB06654,Safinamide,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Debrisoquine,DB04840,Debrisoquine,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Econazole,DB01127,Econazole,approved,drug,1.0,"['P21917', 'P29274', 'P14416', 'P21554']",True,False
+Proparacaine,DB00807,Proparacaine,approved,drug,0.3367,['P21397'],True,False
+Pioglitazone,DB01132,Pioglitazone,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Fentanyl,DB00813,Fentanyl,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Flunarizine,DB04841,Flunarizine,approved,drug,0.5338,"['P21554', 'P14416']",True,False
+Cefapirin,DB01139,Cefapirin,approved,drug,0.725,"['P21917', 'P14416', 'P21554']",True,False
+Methylene blue,DB09241,Methylene blue,approved,drug,0.5907,"['P21397', 'P05067', 'P27338']",True,False
+Pentamidine,DB00738,Pentamidine,approved,drug,0.3367,['P21397'],True,False
+Moclobemide,DB01171,Moclobemide,approved,drug,0.5847,"['P21397', 'P27338']",True,False
+Propofol,DB00818,Propofol,approved,drug,0.7562,['O00519'],True,False
+Chloroxylenol,DB11121,Chloroxylenol,approved,drug,0.3367,['P21397'],True,False
+Troglitazone,DB00197,Troglitazone,approved,drug,0.5847,"['P21397', 'P27338']",True,False
