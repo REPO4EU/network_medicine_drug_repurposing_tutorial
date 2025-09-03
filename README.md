@@ -56,7 +56,7 @@ Install [Docker](https://docs.docker.com/engine/install/) if you do not have it 
 >
 > **macOS**
 > 
-> With macOS, we had better experiences using the free version of [orbstack](https://orbstack.dev/download) instead of Docker Desktop for deploying the containers.
+> With macOS and Apple silicon, we had better experiences using the free version of [orbstack](https://orbstack.dev/download) instead of Docker Desktop for deploying the containers.
 >
 >  **Windows**
 >
