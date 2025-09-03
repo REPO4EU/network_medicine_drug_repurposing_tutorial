@@ -1,7 +1,10 @@
 # Nextflow pipeline for drug repurposing: hands-on
 
-Before starting these hands-on tasks, ensure that you have completed the [Nextflow pipeline setup](../README.md/#nextflow-pipeline-setup)
-.
+> [!IMPORTANT]
+> 
+> Before starting these hands-on tasks, ensure that you have completed the [Nextflow pipeline setup](../README.md/#nextflow-pipeline-setup).
+> 
+> If you cannot get the pipeline to run, or the runs take too much time to complete, you can still work on most hands-on tasks by using the available [result files](data/nextflow_pipeline).
 
 The pipeline runs through the command line, so you do not need a Jupyter server for this session.
 
