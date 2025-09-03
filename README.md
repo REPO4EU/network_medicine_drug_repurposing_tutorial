@@ -39,8 +39,23 @@ Activate the environment (Nextflow is already installed there):
 ```bash  
 conda activate network_medicine_tutorial
 ```
+Install [Docker](https://docs.docker.com/engine/install/) if you do not have it already. If you are not using Linux, check the tips in the box below!
 
-Install [Docker](https://docs.docker.com/engine/install/) if you do not have it already.
+> [!TIP]
+> **OS specifics**
+> 
+> Nextflow works best in combination with Linux. Furthermore, some Docker images in the pipeline are natively only available for `amd64` but not the `arm` architecture.
+> Here are some tips to get the pipeline running with a different OS or architecture:
+>
+> **macOS**
+> With macOS, we had better experiences using the free version of [orbstack](https://orbstack.dev/download) instead of Docker Desktop for deploying the containers.
+> 
+> **What if it keeps failing?**
+>
+> Most pipeline steps are not essential. If the pipeline keeps failing because of a specific process, you may be able to just [skip](https://nf-co.re/diseasemodulediscovery/dev/docs/usage/#skipping-steps) that one.
+>
+> If you cannot produce any pipeline outputs, you can still work on most hands-on tasks by using the [result files](data/nextflow_pipeline) we provide.
+
 
 Now, run the pipeline with the test profile to verify that the setup works:
 
