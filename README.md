@@ -1,6 +1,13 @@
 # Tutorial: Network medicine-based drug repurposing
 
 ## Setup
+> [!TIP]
+> 
+> **Windows**
+> 
+> The easiest way to get the setup running on Windows is to work completely through the **[Windows Subsystem for Linux (WSL)](https://documentation.ubuntu.com/wsl/latest/howto/install-ubuntu-wsl2/)**.
+> Alternatively, you can work with the dependencies in [`environment.windows.yaml`](environment.windows.yaml) for most hands-on tasks.
+
 Clone the repository:
 ```bash  
 git clone https://github.com/REPO4EU/network_medicine_drug_repurposing_tutorial.git
@@ -48,7 +55,12 @@ Install [Docker](https://docs.docker.com/engine/install/) if you do not have it 
 > Here are some tips to get the pipeline running with a different OS or architecture:
 >
 > **macOS**
+> 
 > With macOS, we had better experiences using the free version of [orbstack](https://orbstack.dev/download) instead of Docker Desktop for deploying the containers.
+>
+>  **Windows**
+>
+> You will have to work through the [Windows Subsystem for Linux (WSL)](https://documentation.ubuntu.com/wsl/latest/howto/install-ubuntu-wsl2/).
 > 
 > **What if it keeps failing?**
 >
