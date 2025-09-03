@@ -10,7 +10,7 @@
 
 Clone the repository:
 ```bash  
-git clone https://github.com/REPO4EU/network_medicine_drug_repurposing_tutorial.git
+git clone --recurse-submodules https://github.com/REPO4EU/network_medicine_drug_repurposing_tutorial.git
 ```
 
 Enter the downloaded folder:
