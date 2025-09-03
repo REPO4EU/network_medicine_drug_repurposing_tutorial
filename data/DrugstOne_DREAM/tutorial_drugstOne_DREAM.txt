@@ -1,0 +1,70 @@
+1. Basic settings:
+    iid as PPI
+    only reviewed proteins
+    only approved drugs
+
+2. Upload file
+    choose idspace: symbol
+
+3. Node detail view
+    show properties 
+    cellular components
+
+4. First neighbors (+prune)
+    selection tab -> select all nodes
+    Analsysis -> Target identification -> 1st neighbors
+    idspace chooser while waiting
+    open finished task -> prune on spd value -> try some cutoffs -> final: 0.2
+    explain result: NOX1/NOX4 not connected but NOX5 is
+    => Reproduced results (exact result depends on iid version)
+
+5. Cellular Component Layout + OmniPath directions
+    enable for pruned network
+    show specific components in detail tab -> external link
+    show .svg export
+    save as network view (rename)
+
+---
+
+6. Clustering
+    choose all nodes
+    Clustering -> Leiden -> max cluster size=10
+    in results: delete NOX4 
+    Table view: modularity
+    multi-drag to move clusters -> select cluster with NOX5
+
+7. Pathway Enrichment
+    launch task with defaults
+    task results: explain table view -> filter pathway size
+    explain concept of 'overlapping' nodes
+    check out external link
+
+    visuaize pathway: wiki - NO cGMP PKG Mediated Neuroprotection
+    explain the 3 groups
+    overlay with directions from OmniPath + Layout (for context)
+
+    Add nodes:
+        select DLG4 + NOS3 (only in Pathway)
+    
+    Pathway: wiki - sildenafil Treatment
+    -> add selected nodes (one was already part of it)
+
+    in detail view: explain rank/score -> as support to add nodes
+    use pruning tab for score visualization (also possible for spd)
+
+    save results: add only network, selected nodes, overlap -> create view
+    => refined cluster (could continue for other clusters)
+    -> show view (rename)
+    -> show (only approved) drugs
+
+8. Logger
+    check out steps we dipg_drug
+    download for e.g. supplement for a paper
+    
+9. Add proteins
+    add NOX4 -> Not interacting
+
+
+
+
+
